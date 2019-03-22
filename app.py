@@ -5,7 +5,7 @@ from flask import Flask
 app = Flask(__name__)
 
 # default route
-@app.route('/)
+@app.route('/')
 def index():
     return 'Hello World!'
 
