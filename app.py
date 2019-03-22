@@ -13,7 +13,7 @@ def index():
 def results():
     
     # return a fulfillment response
-    return {'fulfillmentText': 'This is a response from webhook.'}
+    return 'Webhook'
 
 # create a route for webhook
 @app.route('/webhook', methods=['GET', 'POST'])
