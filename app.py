@@ -17,7 +17,7 @@ def results():
     jsonFormat = json.loads('{"fulfillmentText": "This is a response from webhook."}')
     
     # return a fulfillment response
-    return jsonFormat
+    return make_response(jsonFormat)
 
 # create a route for webhook
 @app.route('/webhook', methods=['GET', 'POST'])
