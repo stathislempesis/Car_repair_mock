@@ -20,10 +20,15 @@ def results():
     # fetch action from json
     action = req.get('queryResult').get('action')
     
-    print(action)
-    
+    if(action=="hours"):
+        response = make_response(jsonify({'fulfillmentText': 'Our opening hours are Monday - Friday from 9.00 am to 5.00 pm.'}))
+    elif(action=="repair"):
+        response = make_response(jsonify({'fulfillmentText': 'Repair.'}))
+    else:
+        response = make_response(jsonify({'fulfillmentText': 'Something else.'}))
+        
     # return a fulfillment response
-    return make_response(jsonify({'fulfillmentText': 'This is a response from webhook.'}))
+    return response
 
 # create a route for webhook
 @app.route('/webhook', methods=['GET', 'POST'])
