@@ -30,7 +30,7 @@ def results():
         #response = make_response(jsonify({'fulfillmentText': 'Something else.'}))
         
     # return a fulfillment response
-    return make_response(jsonify({'fulfillmentText': 'Yolo.'})
+    return make_response(jsonify({'fulfillmentText': 'Yolo.'}))
 
 # create a route for webhook
 @app.route('/webhook', methods=['GET', 'POST'])
