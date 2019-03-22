@@ -12,7 +12,7 @@ def index():
 # create a route for webhook
 @app.route('/webhook')
 def hello():
-    return 'Hello World!'
+    return {'fulfillmentText': 'This is a response from webhook.'}
 
 # run the app
 if __name__ == '__main__':
