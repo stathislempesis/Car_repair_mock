@@ -21,7 +21,7 @@ def results():
     action = req.get('queryResult').get('action')
     
     parameters = req.get('queryResult').get('parameters')
-    print(parameters['car-type'];)
+    print(parameters['car-type'])
     #if(action=="hours"):
        # response = make_response(jsonify({'fulfillmentText': 'Our opening hours are Monday - Friday from 9.00 am to 5.00 pm.'}))
     #elif(action=="repair"):
