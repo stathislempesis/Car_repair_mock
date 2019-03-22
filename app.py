@@ -28,7 +28,7 @@ def results():
     if parameters['car-type'] and parameters['service-option'] and parameters['date']:
        selected_date = datetime.strptime(parameters['date'].split('T')[0], '%Y-%m-%d')
        
-       if(parameters['date'] in not_available_dates):
+       if(selected_date in not_available_dates):
             response = make_response(jsonify({'fulfillmentText': 'There is not free slot at your selected date. Please choose another day.'}))
        else:
             response = make_response(jsonify({'fulfillmentText': 'You are all booked.'}))
