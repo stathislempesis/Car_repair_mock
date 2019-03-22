@@ -14,7 +14,7 @@ def index():
 # function for responses
 def results():
     
-    jsonFormat = json.loads('{fulfillmentText': 'This is a response from webhook.}')
+    jsonFormat = json.loads('{"fulfillmentText": "This is a response from webhook."}')
     
     # return a fulfillment response
     return jsonFormat
