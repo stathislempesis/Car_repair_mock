@@ -26,7 +26,7 @@ def results():
     return make_response(jsonify({'fulfillmentText': 'This is a response from webhook.'}))
 
 # create a route for webhook
-@app.route('/webhook')
+@app.route('/webhook', methods=['GET', 'POST'])
 def hello():
     return results()
 
