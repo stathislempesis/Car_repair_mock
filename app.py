@@ -10,7 +10,7 @@ def index():
     return 'Hello World!'
 
 # create a route for webhook
-@app.route('/webhook')
+@app.route('/webhook', methods=['GET', 'POST'])
 def hello():
     return {'fulfillmentText': 'This is a response from webhook.'}
 
