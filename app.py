@@ -1,3 +1,5 @@
+import json
+
 # import flask dependencies
 from flask import Flask
 
@@ -12,8 +14,10 @@ def index():
 # function for responses
 def results():
     
+    jsonFormat = json.loads({'fulfillmentText': 'This is a response from webhook.'})
+    
     # return a fulfillment response
-    return jsonify({'fulfillmentText': 'This is a response from webhook.'})
+    return jsonFormat
 
 # create a route for webhook
 @app.route('/webhook', methods=['GET', 'POST'])
