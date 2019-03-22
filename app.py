@@ -26,7 +26,7 @@ def results():
     not_available_dates = [datetime(2019, 3,26), datetime(2019, 3, 27)]
     
     if parameters['car-type'] and parameters['service-option'] and parameters['date']:
-       selected_date = datetime.strptime(parameters['date'], '%Y-%m-%dT%H:%M:%S+%M:%S')
+       selected_date = datetime.strptime(parameters['date'], '%Y-%m-%dT%H:%M:%S')
        response = make_response(jsonify({'fulfillmentText': 'Our opening hours are Monday - Friday from 9.00 am to 5.00 pm.'}))
     else:
        response = make_response(jsonify({'fulfillmentText': 'Something else.'}))
