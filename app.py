@@ -23,7 +23,7 @@ def results():
     
     parameters = req.get('queryResult').get('parameters')
     
-    not_available_dates = [datetime.date(2019, 3,26), datetime.date(2019, 3, 27)]
+    not_available_dates = [datetime(2019, 3,26), datetime(2019, 3, 27)]
     
     if parameters['car-type'] and parameters['service-option'] and parameters['date']:
        selected_date = datetime.strptime(parameters['date'], '%Y-%m-%dT%H:%M:%S+%M:%S')
